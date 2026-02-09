@@ -1,7 +1,7 @@
 < ! DOCTYPE html >
 <html lang ="en">
 <head>
-	<meta charset="UTF-8">Submit</butto	n>	
+	<meta charset="UTF-8">Submit</button>	
 	<title>Personal Online CV</title>
 </head>
 <body>
