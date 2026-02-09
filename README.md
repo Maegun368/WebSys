@@ -1,2 +1,2 @@
-# Web-System-and-Technology--1st-Repo
+# WebSys
 Maegun Quitoriano
