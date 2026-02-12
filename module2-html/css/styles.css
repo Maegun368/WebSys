@@ -1,4 +1,4 @@
-/* || Global Styles */
+/* || [span_4](start_span)TASK 3: Global Styles[span_4](end_span) */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,17 +8,17 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: #f4f4f4; [span_5](start_span)/*[span_5](end_span) */
+    padding: 20px; [span_6](start_span)/*[span_6](end_span) */
 }
 
-/* || Layout Structure */
+/* || [span_7](start_span)TASK 4: Center the Page[span_7](end_span) */
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* || Card Styling */
+/* || [span_8](start_span)TASK 5: Card Styling[span_8](end_span) */
 .card {
     background: #ffffff;
     padding: 20px;
@@ -27,75 +27,78 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* || Typography */
+/* || [span_9](start_span)TASK 6: Typography[span_9](end_span) */
 h1 {
     text-align: center;
     margin-bottom: 10px;
 }
-
 h2 {
     margin-bottom: 10px;
     margin-top: 20px;
 }
-
 p {
     margin-bottom: 10px;
 }
 
-/* || Lists */
+/* || [span_10](start_span)TASK 7: Style Lists[span_10](end_span) */
 ul {
     margin-left: 20px;
     margin-bottom: 10px;
 }
 
-/* || Hyperlinks */
+/* || [span_11](start_span)TASK 8: Style Hyperlinks[span_11](end_span) */
 a {
     text-decoration: none;
-    color: #cc46b6;
+    color: #e786e2;
 }
-
 a:hover {
-    color: #cc46b6;
+    color: #e786e2;
 }
 
-/* || Table Styling */
+/* || [span_12](start_span)TASK 9: Style the Table[span_12](end_span) */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-
 th, td {
     border: 1px solid #ccc;
     padding: 8px;
 }
-
 th {
-    background-color: #cc46b6;
+    background-color: #e786e2;
     color: white;
 }
 
-/* || Contact Form */
+/* || [span_13](start_span)TASK 10: Style the Contact Form[span_13](end_span) */
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 input, textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 button {
     padding: 10px;
-    background-color: #cc46b6;
+    background-color: #e786e2;
     color: white;
     border: none;
     cursor: pointer;
 }
-
 button:hover {
-    background-color: #cc46b6;
+    background-color: #e786e2;
+}
+
+/* CUSTOM: Centering your Photo */
+.profile-2x2 {
+    display: block; /* Required to use auto margins */
+    margin: 0 auto 20px auto; /* Centers horizontally and adds bottom space */
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid #505050;
+    border-radius: 50%;
 }
