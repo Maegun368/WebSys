@@ -1,2 +1,0 @@
-# WebSys
-Maegun Quitoriano
