@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4; [span_5](start_span)/*[span_5](end_span) */
+    background-color: #FEEAC9; [span_5](start_span)/*[span_5](end_span) */
     padding: 20px; [span_6](start_span)/*[span_6](end_span) */
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* || [span_8](start_span)TASK 5: Card Styling[span_8](end_span) */
 .card {
-    background: #ffffff;
+    background: #FFCDC9;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -49,10 +49,10 @@ ul {
 /* || [span_11](start_span)TASK 8: Style Hyperlinks[span_11](end_span) */
 a {
     text-decoration: none;
-    color: #e786e2;
+    color: #FD7979;
 }
 a:hover {
-    color: #e786e2;
+    color: #FDACAC;
 }
 
 /* || [span_12](start_span)TASK 9: Style the Table[span_12](end_span) */
@@ -66,7 +66,7 @@ th, td {
     padding: 8px;
 }
 th {
-    background-color: #e786e2;
+    background-color: #FD7979;
     color: white;
 }
 
@@ -83,7 +83,7 @@ input, textarea {
 }
 button {
     padding: 10px;
-    background-color: #e786e2;
+    background-color: #FD7979;
     color: white;
     border: none;
     cursor: pointer;
