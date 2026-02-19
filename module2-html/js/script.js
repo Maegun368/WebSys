@@ -8,6 +8,7 @@ submitBtn.addEventListener("submit", function (event) {
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
+    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "Light" : "Dark";
 });
 
 const toggleSkills = document.getElementById("toggleSkills");
