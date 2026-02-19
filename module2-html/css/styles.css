@@ -1,4 +1,4 @@
-/* || [span_4](start_span)TASK 3: Global Styles[span_4](end_span) */
+/* || Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,94 +8,151 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #FEEAC9; [span_5](start_span)/*[span_5](end_span) */
-    padding: 20px; [span_6](start_span)/*[span_6](end_span) */
+    background-color: #FEEAC9;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* || [span_7](start_span)TASK 4: Center the Page[span_7](end_span) */
+/* || Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .card {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode th {
+    background-color: #b85555;
+}
+
+body.dark-mode td {
+    border-color: #555;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #444;
+    color: white;
+    border-color: #666;
+}
+
+body.dark-mode p[style] {
+    color: #aaa !important;
+}
+
+/* || Top Controls */
+.top-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* || Center the Page */
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* || [span_8](start_span)TASK 5: Card Styling[span_8](end_span) */
+/* || Card Styling */
 .card {
     background: #FFCDC9;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
 }
 
-/* || [span_9](start_span)TASK 6: Typography[span_9](end_span) */
+/* || Hidden utility */
+.hidden {
+    display: none;
+}
+
+/* || Typography */
 h1 {
     text-align: center;
     margin-bottom: 10px;
 }
+
 h2 {
     margin-bottom: 10px;
     margin-top: 20px;
 }
+
 p {
     margin-bottom: 10px;
 }
 
-/* || [span_10](start_span)TASK 7: Style Lists[span_10](end_span) */
+/* || Lists */
 ul {
     margin-left: 20px;
     margin-bottom: 10px;
 }
 
-/* || [span_11](start_span)TASK 8: Style Hyperlinks[span_11](end_span) */
+/* || Hyperlinks */
 a {
     text-decoration: none;
     color: #FD7979;
 }
+
 a:hover {
     color: #FDACAC;
 }
 
-/* || [span_12](start_span)TASK 9: Style the Table[span_12](end_span) */
+/* || Table */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
+
 th, td {
     border: 1px solid #ccc;
     padding: 8px;
 }
+
 th {
     background-color: #FD7979;
     color: white;
 }
 
-/* || [span_13](start_span)TASK 10: Style the Contact Form[span_13](end_span) */
+/* || Contact Form */
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 input, textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 button {
     padding: 10px;
     background-color: #FD7979;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
+
 button:hover {
     background-color: #e786e2;
 }
 
-/* CUSTOM: Centering your Photo */
+/* || Profile Photo */
 .profile-2x2 {
-    display: block; /* Required to use auto margins */
-    margin: 0 auto 20px auto; /* Centers horizontally and adds bottom space */
+    display: block;
+    margin: 0 auto 20px auto;
     width: 300px;
     height: 300px;
     object-fit: cover;

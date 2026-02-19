@@ -5,9 +5,9 @@
     <title>Maegun Aixel Quitoriano</title>
     
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
+        <button id="themeToggle">Dark</button>
 
     <main class="container"> 
 
@@ -25,9 +25,11 @@
             </p>
             <p 
             style="text-align: center;">Hello! My name is Maegun, I like to play games.</p>
-        </section>
+        </section> 
 
-        <section class="card">
+        <button id="toggleSkills">Lock/Unlock Skills</button>
+
+        <section class="card" id="skillsSection">
             <h2>SKILLS</h2>
             <ul>
                 <li>HTML</li>
@@ -64,14 +66,14 @@
         <section class="card">
             <h2>CONTACT ME</h2>
             <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email"placeholder="Email">
                 <textarea placeholder="Message"></textarea>
-                <button type="submit">SEND</button>
+                <button type="submit" id="submitBtn">SEND</button>
             </form>
         </section>
 
         <p style="text-align: center; color: #666;">&copy; 2026 Quitoriano Maegun Aixel. All rights reserved.</p>
 
-    </main> </body>
+    </main> <script src="js/script.js"></script> </body>
 </html>
