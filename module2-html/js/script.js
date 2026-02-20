@@ -12,10 +12,11 @@ themeToggle.addEventListener("click", function () {
 });
 
 const toggleSkills = document.getElementById("toggleSkills");
-const skillsSection = document.getElementById("skillsSection");
-
 toggleSkills.addEventListener("click", function () {
     skillsSection.classList.toggle("hidden");
+    toggleSkills.textContent = skillsSection.classList.contains("hidden")
+        ? "Show"
+        : "Hide";
 });
 
 submitBtn.addEventListener("click",function(event){
