@@ -1,7 +1,7 @@
 function Header() {
     return (
       <section className="card">
-        <img src="/pfp.png" className="profile-2x2" alt="Profile Picture" />
+        <img src={`${import.meta.env.BASE_URL}pfp.png`} className="profile-2x2" alt="Profile Picture" />
         <section>
           <h1>Quitoriano, Maegun Aixel J.</h1>
           <p style={{ textAlign: "center" }}>IT Student | WEB SYSTEMS AND TECHNOLOGIES</p>
