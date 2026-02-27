@@ -23,9 +23,16 @@ function Header({ skillsVisible, setSkillsVisible }) {
             github.com/Maegun368
           </a>
         </p>
-        <button onClick={() => setSkillsVisible(!skillsVisible)}>
-        {skillsVisible ? "Hide Skills" : "Show Skills"}
-      </button> 
+        <div className="card-actions">
+          <button
+            type="button"
+            onClick={() => setSkillsVisible(!skillsVisible)}
+            aria-expanded={skillsVisible}
+            aria-controls="skillsSection"
+          >
+            {skillsVisible ? "Hide Skills" : "Show Skills"}
+          </button>
+        </div>
       </section>
 
       </>

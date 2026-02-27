@@ -118,6 +118,11 @@ body.dark-mode .toggle-label {
   transition: background-color 0.3s;
 }
 
+.card-actions {
+  text-align: center; /* center the button */
+  margin-top: 12px;
+}
+
 /* || Hidden utility */
 .hidden {
   display: none;
@@ -198,6 +203,18 @@ button {
 
 button:hover {
   background-color: #e786e2;
+}
+
+/* || Card actions (centered buttons inside cards) */
+.card-actions {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.card-actions button {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 0.95rem;
 }
 
 /* || Profile Photo */
