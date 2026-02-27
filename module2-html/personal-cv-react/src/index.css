@@ -6,21 +6,16 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-/* || Default body styles */
-body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto" italic, sans-serif;
+  font-weight: 100;
   line-height: 1.6;
-  background-color: #FEEAC9;
+  background-color: #FD7979;
   padding: 20px;
   min-height: 100vh;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-/* || Dark Mode - applied to body via useEffect */
+/* || Dark Mode */
 body.dark-mode {
   background-color: #222;
   color: white;
@@ -50,14 +45,61 @@ body.dark-mode .footer-text {
   color: #aaa;
 }
 
-/* || Top Controls */
-.top-controls {
+/* || Sun/Moon Toggle */
+.theme-toggle-wrapper {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  justify-content: flex-end;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 16px auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle {
+  --size: 2rem;
+
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+
+  width: var(--size);
+  height: var(--size);
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: hsl(240, 100%, 30%);
+
+  transition: all 500ms;
+}
+
+/* checked = light mode (sun) */
+.toggle:checked {
+  --ray-size: calc(var(--size) * -0.4);
+  --offset-orthogonal: calc(var(--size) * 0.65);
+  --offset-diagonal: calc(var(--size) * 0.45);
+  transform: scale(0.75);
+  color: hsl(40, 100%, 50%);
+  box-shadow:
+    inset 0 0 0 var(--size),
+    calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+    var(--offset-orthogonal) 0 0 var(--ray-size),
+    0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+    0 var(--offset-orthogonal) 0 var(--ray-size),
+    calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
+    var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+    calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+    var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+
+.toggle-label {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #666;
+  user-select: none;
+}
+
+body.dark-mode .toggle-label {
+  color: #aaa;
 }
 
 /* || Center the Page */
@@ -85,6 +127,8 @@ body.dark-mode .footer-text {
 h1 {
   text-align: center;
   margin-bottom: 10px;
+  font-size: 6rem;
+  font-family:Times New Roman, serif;
 }
 
 h2 {
@@ -158,11 +202,12 @@ button:hover {
 
 /* || Profile Photo */
 .profile-2x2 {
-  display: block;
-  margin: 0 auto 20px auto;
-  width: 300px;
-  height: 300px;
+  float: right;
+  margin: 0 0 20px 20px;
+  width: 290px;
+  height: 290px;
   object-fit: cover;
+  object-position: center top;
   border: 3px solid #505050;
   border-radius: 50%;
 }
@@ -172,4 +217,4 @@ button:hover {
   text-align: center;
   color: #666;
   margin-top: 10px;
-} 
+}

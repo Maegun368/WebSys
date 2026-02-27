@@ -1,12 +1,16 @@
-function Header() {
+function Header({ skillsVisible, setSkillsVisible }) {
     return (
+      <>
       <section className="card">
         <img src={`${import.meta.env.BASE_URL}pfp.png`} className="profile-2x2" alt="Profile Picture" />
         <section>
-          <h1>Quitoriano, Maegun Aixel J.</h1>
-          <p style={{ textAlign: "center" }}>IT Student | WEB SYSTEMS AND TECHNOLOGIES</p>
+          <h1>MAEGUN</h1>
+          <p style={{ textAlign: "center" }}>Hi, I'm Maegun Aixel J. Quitoriano. I enjoy learning, building, and challenging myself in different areas. 
+              I thrive near deadlines and consistently convert high pressure moments into high quality outcomes.</p>
         </section>
-        <h2>ABOUT ME</h2>
+      </section>
+
+      <section className="card">
         <p style={{ textAlign: "center" }}>
           Email:{" "}
           <a href="mailto:Quitoriano.maegunaixel@gmail.com">
@@ -19,10 +23,12 @@ function Header() {
             github.com/Maegun368
           </a>
         </p>
-        <p style={{ textAlign: "center" }}>
-          Hello! My name is Maegun, I like to play games.
-        </p>
+        <button onClick={() => setSkillsVisible(!skillsVisible)}>
+        {skillsVisible ? "Hide Skills" : "Show Skills"}
+      </button> 
       </section>
+
+      </>
     );
   }
   

@@ -7,7 +7,8 @@ function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (name === "" || email === "") {
+    // ensure all fields including message are filled
+    if (name === "" || email === "" || message === "") {
       alert("Please fill in all required fields.");
     } else {
       alert("Form submitted successfully!");

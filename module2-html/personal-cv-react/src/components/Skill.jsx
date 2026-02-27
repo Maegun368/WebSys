@@ -1,13 +1,6 @@
-import { useState } from "react";
-
-function Skills() {
-  const [visible, setVisible] = useState(true);
-
+function Skills({ visible }) {
   return (
     <>
-      <button onClick={() => setVisible(!visible)}>
-        {visible ? "Hide" : "Show"}
-      </button>
 
       {visible && (
         <section className="card" id="skillsSection">
