@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from "./card";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -7,11 +8,10 @@ function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // ensure all fields including message are filled
     if (name === "" || email === "" || message === "") {
       alert("Please fill in all required fields.");
     } else {
-      alert("Form submitted successfully!");
+      alert(`Thank you ${name}! Your message has been sent.`);
       setName("");
       setEmail("");
       setMessage("");
@@ -19,8 +19,7 @@ function Contact() {
   }
 
   return (
-    <section className="card">
-      <h2>CONTACT ME</h2>
+    <Card title="CONTACT ME">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -41,7 +40,7 @@ function Contact() {
         />
         <button type="submit">SEND</button>
       </form>
-    </section>
+    </Card>
   );
 }
 

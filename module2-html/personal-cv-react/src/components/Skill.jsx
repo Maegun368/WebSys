@@ -1,26 +1,19 @@
-function Skills({ visible }) {
+import Card from "./card";
+
+function Skills({ visible, skills }) {
   return (
     <>
-
       {visible && (
-        <section className="card" id="skillsSection">
-          <h2>SKILLS</h2>
+        <Card title="SKILLS" id="skillsSection">
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>
-              Web Development
-              <ul>
-                <li>Frontend</li>
-                <li>Backend</li>
-              </ul>
-            </li>
+            {skills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
           </ul>
-        </section>
+        </Card>
       )}
     </>
   );
 }
 
-export default Skills; 
+export default Skills;

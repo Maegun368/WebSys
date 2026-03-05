@@ -4,11 +4,45 @@ import Skills from "./components/Skill";
 import Education from "./components/education";
 import Contact from "./components/contact";
 
+// Task 1: Skills data array
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Web Development - Frontend",
+  "Web Development - Backend",
+  "Hard Coder Prompt Master",
+];
+
+// Task 3: Education data array
+const education = [
+  {
+    program: "Kinder",
+    school: "Cugman Elementary School",
+    year: "2010",
+  },
+  {
+    program: "Grade School",
+    school: "Gusa Elementary School",
+    year: "2016",
+  },
+  {
+    program: "STEM",
+    school: "Southern Philippines College",
+    year: "2023",
+  },
+  {
+    program: "CITC",
+    school: "USTP - CDO Campus",
+    year: "2028",
+  },
+];
+
 function App() {
   const hours = new Date().getHours();
   const isDaytime = hours > 7 && hours < 20;
 
-  // read preference from localStorage, fall back to daytime calculation
   const [darkMode, setDarkMode] = useState(() => {
     try {
       const stored = localStorage.getItem("darkMode");
@@ -21,18 +55,14 @@ function App() {
     return !isDaytime;
   });
 
-  // manage skills visibility
   const [skillsVisible, setSkillsVisible] = useState(true);
 
   useEffect(() => {
-    // sync body class
     if (darkMode) {
       document.body.classList.add("dark-mode");
     } else {
       document.body.classList.remove("dark-mode");
     }
-
-    // persist preference so it survives reloads
     try {
       localStorage.setItem("darkMode", JSON.stringify(darkMode));
     } catch {
@@ -50,13 +80,19 @@ function App() {
           checked={darkMode}
           onChange={() => setDarkMode(!darkMode)}
         />
-        <label htmlFor="toggle" className="toggle-label" title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}></label>
+        <label
+          htmlFor="toggle"
+          className="toggle-label"
+          title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        ></label>
       </div>
 
       <main className="container">
         <Header skillsVisible={skillsVisible} setSkillsVisible={setSkillsVisible} />
-        <Skills visible={skillsVisible} />
-        <Education />
+        {/* Task 1: pass skills as props */}
+        <Skills visible={skillsVisible} skills={skills} />
+        {/* Task 3: pass education as props */}
+        <Education education={education} />
         <Contact />
         <p className="footer-text">
           &copy; 2026 Quitoriano Maegun Aixel. All rights reserved.
