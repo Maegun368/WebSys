@@ -8,14 +8,33 @@ function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
     if (name === "" || email === "" || message === "") {
       alert("Please fill in all required fields.");
-    } else {
-      alert(`Thank you ${name}! Your message has been sent.`);
-      setName("");
-      setEmail("");
-      setMessage("");
+      return;
     }
+
+    fetch("http://localhost/cv-api/process.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message) {
+          alert(data.message);
+        } else {
+          alert("Unexpected error occurred.");
+        }
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch(() => {
+        alert("Failed to connect to the server.");
+      });
   }
 
   return (

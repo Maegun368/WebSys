@@ -18,24 +18,29 @@ const skills = [
 // Task 3: Education data array
 const education = [
   {
-    program: "Kinder",
+    program: "Kindergarten ",
     school: "Cugman Elementary School",
     year: "2010",
   },
   {
     program: "Grade School",
     school: "Gusa Elementary School",
-    year: "2016",
+    year: "20--",
   },
   {
-    program: "STEM",
+    program: "Junior High School",
+    school: "Cugman National High School",
+    year: "20--",
+  },
+  {
+    program: "Senior High School",
     school: "Southern Philippines College",
-    year: "2023",
+    year: "20--",
   },
   {
-    program: "CITC",
+    program: "College",
     school: "USTP - CDO Campus",
-    year: "2028",
+    year: "20--",
   },
 ];
 
