@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Skills from "./components/Skill";
 import Education from "./components/education";
 import Contact from "./components/contact";
+import Works from "./components/works";
 
 // Task 1: Skills data array
 const skills = [
@@ -89,10 +90,14 @@ function App() {
 
       <main className="container">
         <Header skillsVisible={skillsVisible} setSkillsVisible={setSkillsVisible} />
-        {/* Task 1: pass skills as props */}
-        <Skills visible={skillsVisible} skills={skills} />
-        {/* Task 3: pass education as props */}
-        <Education education={education} />
+
+        <div className={`content-grid ${skillsVisible ? 'with-skills' : 'no-skills'}`}>
+          <Education education={education} />
+          <Skills visible={skillsVisible} skills={skills} />
+        </div>
+
+        <Works />
+
         <Contact />
         <p className="footer-text">
           &copy; 2026 Quitoriano Maegun Aixel. All rights reserved.
